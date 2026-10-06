@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONIK · Архив Республики Эгида</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="corkboard">
+        <header class="board-header">
+            <div class="board-header__title-card">
+                <div class="pin pin--top"></div>
+                <div class="board-subtitle">Archiv der Republik Ägide</div>
+                <h1 class="board-title">CHRONIK</h1>
+                <div class="board-meta">Провиденс · 1958 · Фонд № VII</div>
+            </div>
+        </header>
+
+        <nav class="board-nav">
+            <a href="index.html" class="folder"><div class="folder__tab">I</div><div class="folder__label">ГЛАВНАЯ</div></a>
+            <a href="lore.html" class="folder"><div class="folder__tab">II</div><div class="folder__label">ЛОР</div></a>
+            <a href="chronology.html" class="folder folder--active"><div class="folder__tab">III</div><div class="folder__label">ХРОНОЛОГИЯ</div></a>
+            <a href="factions.html" class="folder"><div class="folder__tab">IV</div><div class="folder__label">ФРАКЦИИ</div></a>
+            <a href="characters.html" class="folder"><div class="folder__tab">V</div><div class="folder__label">ПЕРСОНАЖИ</div></a>
+        </nav>
+
+        <main class="board-main">
+            <!-- Горизонтальный таймлайн -->
+            <div class="timeline-container">
+                <div class="timeline-track" id="timelineTrack">
+                    <!-- Карточки генерируются через JS -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="board-footer">
+            <span>Республика Эгида · Провиденс · 1958</span>
+            <span>Форма 7-Б · Хранить 25 лет</span>
+        </footer>
+    </div>
+
+    <!-- Выезжающая панель с подробностями -->
+    <div class="timeline-detail-panel" id="detailPanel">
+        <button class="detail-close" id="detailClose">×</button>
+        <div class="detail-content">
+            <div class="detail-image" id="detailImage" style="display: none;">
+                <img src="" alt="" id="detailImg">
+            </div>
+            <div class="detail-text">
+                <div class="detail-year" id="detailYear">—</div>
+                <h2 class="detail-title" id="detailTitle">—</h2>
+                <p class="detail-desc" id="detailDesc">—</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data_chronology.js"></script>
+    <script src="js/chronology.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARTAIEN · Архив Республики Эгида</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="corkboard">
+        <!-- SVG для красных нитей -->
+        <svg class="faction-threads" id="factionThreads" width="100%" height="100%"></svg>
+
+        <header class="board-header">
+            <div class="board-header__title-card">
+                <div class="pin pin--top"></div>
+                <div class="board-subtitle">Archiv der Republik Ägide</div>
+                <h1 class="board-title">PARTAIEN</h1>
+                <div class="board-meta">Провиденс · 1958 · Фонд № VII</div>
+            </div>
+        </header>
+
+            <!-- МОДАЛЬНОЕ ОКНО: ПАСПОРТ -->
+    <div class="passport-modal" id="passportModal">
+        <div class="passport-modal__overlay" id="modalOverlay"></div>
+        <div class="passport-book" id="passportBook">
+            <button class="passport-close" id="modalClose">×</button>
+            
+            <!-- ОБЛОЖКА -->
+            <div class="passport-cover" id="passportCover">
+                <div class="passport-cover__front">
+                    <div class="passport-cover__emblem">✠</div>
+                    <div class="passport-cover__title">PERSONALAUSWEIS</div>
+                    <div class="passport-cover__subtitle">Republik Ägide</div>
+                    <div class="passport-cover__year">1958</div>
+                </div>
+                <div class="passport-cover__back">
+                    <div class="passport-photo-full" id="pPhoto">
+                        <span class="passport-photo__stamp" id="pNoPhotoStamp">НЕТ ФОТО<br>ОБЪЕКТА</span>
+                        <div class="passport-status-stamp" id="pStatusStamp" style="display: none;"></div>
+                        <div class="passport-rating-sticker" id="pRatingSticker" style="display: none;">
+                            <div class="passport-rating-label">РЕЙТИНГ</div>
+                            <div class="passport-rating-value" id="pRating">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- МОБИЛЬНОЕ ФОТО -->
+            <div class="passport-mobile-photo" id="pMobilePhoto" style="display: none;">
+                <span class="passport-photo__stamp" id="pMobileNoPhotoStamp">НЕТ ФОТО<br>ОБЪЕКТА</span>
+                <div class="passport-status-stamp" id="pMobileStatusStamp" style="display: none;"></div>
+                <div class="passport-rating-sticker" id="pMobileRatingSticker" style="display: none;">
+                    <div class="passport-rating-label">РЕЙТИНГ</div>
+                    <div class="passport-rating-value" id="pMobileRating">0</div>
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ СТРАНИЦА -->
+            <div class="passport-page passport-page--right">
+                <div class="passport-header">
+                    <div class="passport-faction" id="pFaction">—</div>
+                    <div class="passport-npc-stamp" id="pNpcStamp" style="display: none;">NPC</div>
+                    <h2 class="passport-name" id="pName">ИМЯ ФАМИЛИЯ</h2>
+                    <div class="passport-profession" id="pProfession">—</div>
+                </div>
+                
+                <div class="passport-content">
+                    <div class="passport-section">
+                        <h3 class="passport-section__title">Биография</h3>
+                        <p class="passport-section__text" id="pBiography">—</p>
+                    </div>
+                    <div class="passport-section">
+                        <h3 class="passport-section__title">Внешность</h3>
+                        <p class="passport-section__text" id="pAppearance">—</p>
+                    </div>
+                    <div class="passport-section">
+                        <h3 class="passport-section__title">Характер</h3>
+                        <p class="passport-section__text" id="pCharacter">—</p>
+                    </div>
+                    <div class="passport-section">
+                        <h3 class="passport-section__title">Роль в городе</h3>
+                        <p class="passport-section__text" id="pRole">—</p>
+                    </div>
+
+                    <div class="passport-footer">
+                        <div class="passport-links-row" id="pLinksRow">
+                            <a href="#" class="passport-link-btn" id="pAlbumLink" target="_blank" style="display: none;">
+                                <span class="passport-link-icon">◈</span>
+                                <span class="passport-link-text">Альбом</span>
+                            </a>
+                            <a href="#" class="passport-link-btn" id="pDiscussionLink" target="_blank" style="display: none;">
+                                <span class="passport-link-icon">✎</span>
+                                <span class="passport-link-text">Обсуждение</span>
+                            </a>
+                            <a href="#" class="passport-link-btn" id="pLoreLink" target="_blank" style="display: none;">
+                                <span class="passport-link-icon">✦</span>
+                                <span class="passport-link-text">Лорная статья</span>
+                            </a>
+                        </div>
+                        <span class="passport-note" id="pStatusNote"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <nav class="board-nav">
+            <a href="index.html" class="folder"><div class="folder__tab">I</div><div class="folder__label">ГЛАВНАЯ</div></a>
+            <a href="lore.html" class="folder"><div class="folder__tab">II</div><div class="folder__label">ЛОР</div></a>
+            <a href="chronology.html" class="folder"><div class="folder__tab">III</div><div class="folder__label">ХРОНОЛОГИЯ</div></a>
+            <a href="factions.html" class="folder folder--active"><div class="folder__tab">IV</div><div class="folder__label">ФРАКЦИИ</div></a>
+            <a href="characters.html" class="folder"><div class="folder__tab">V</div><div class="folder__label">ПЕРСОНАЖИ</div></a>
+        </nav>
+
+        <main class="board-main">
+            <!-- Фильтр по категориям -->
+            <div class="filter-bar" id="factionFilterBar"></div>
+
+            <!-- Иерархическая сетка фракций -->
+            <div class="faction-hierarchy" id="factionHierarchy"></div>
+        </main>
+
+        <footer class="board-footer">
+            <span>Республика Эгида · Провиденс · 1958</span>
+            <span>Форма 7-Б · Хранить 25 лет</span>
+        </footer>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ФРАКЦИИ -->
+    <div class="faction-modal" id="factionModal">
+        <div class="faction-modal__overlay" id="factionOverlay"></div>
+        <div class="faction-detail-sheet">
+            <button class="faction-close" id="factionClose">×</button>
+            <div class="pin pin--top-left"></div>
+            
+            <div class="faction-detail__header">
+                <div class="faction-detail__tag" id="fDetailTag">#Тег</div>
+                <h2 class="faction-detail__name" id="fDetailName">Название фракции</h2>
+                <div class="faction-detail__type" id="fDetailType">Публичный вид деятельности</div>
+            </div>
+
+            <div class="faction-detail__desc" id="fDetailDesc">Описание...</div>
+
+            <div class="faction-detail__roster">
+                <h3 class="faction-detail__roster-title">Список участников и ролей</h3>
+                <div class="faction-roster-list" id="fRosterList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data_factions.js"></script>
+    <script src="js/data_characters.js"></script>
+    <script src="js/factions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

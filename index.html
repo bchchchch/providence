@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVIDENCE · Архив Республики Эгида</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="corkboard">
+        <svg class="threads" id="threadsSvg" width="100%" height="100%"></svg>
+
+        <header class="board-header">
+            <div class="board-header__title-card" id="headerCard">
+                <div class="pin pin--top"></div>
+                <div class="board-subtitle">Archiv der Republik Ägide</div>
+                <h1 class="board-title">PROVIDENCE</h1>
+                <div class="board-meta">Провиденс · 1958 · Фонд № VII</div>
+            </div>
+        </header>
+
+        <nav class="board-nav">
+            <a href="index.html" class="folder folder--active" id="nav-1"><div class="folder__tab">I</div><div class="folder__label">ГЛАВНАЯ</div></a>
+            <a href="lore.html" class="folder" id="nav-2"><div class="folder__tab">II</div><div class="folder__label">ЛОР</div></a>
+            <a href="chronology.html" class="folder" id="nav-3"><div class="folder__tab">III</div><div class="folder__label">ХРОНОЛОГИЯ</div></a>
+            <a href="factions.html" class="folder" id="nav-4"><div class="folder__tab">IV</div><div class="folder__label">ФРАКЦИИ</div></a>
+            <a href="characters.html" class="folder" id="nav-5"><div class="folder__tab">V</div><div class="folder__label">ПЕРСОНАЖИ</div></a>
+        </nav>
+
+        <main class="board-main">
+            <div class="sheet sheet--red">
+                <div class="pin pin--top-left"></div>
+                <div class="sheet__stamp">СЕКРЕТНО</div>
+                <h2 class="sheet__heading">Дело № 1958/VII</h2>
+                <p class="sheet__lead">
+                    Республика Эгида — крошечное государство в сердце Альп,
+                    зажатое между австрийским Зальцбургом и баварским Мюнхеном.
+                </p>
+                <p>
+                    Сегодня Эгида — цифровой авторитаризм: у каждого есть радио,
+                    без устали вещающее голос канцлера, а компьютерная сеть
+                    <strong>Sub Aegide</strong> опутала республику. Действие архива
+                    разворачивается в столице — городе Провиденс — в 1958 году.
+                </p>
+                <div class="sheet__footer">
+                    <span>Сост.: Мин. культуры, пропаганды и цензуры</span>
+                    <span>Листов: 1</span>
+                </div>
+            </div>
+
+            <div class="sticky-note">
+                <div class="pin pin--small" style="top: -8px; left: 50%; transform: translateX(-50%);"></div>
+                <p>Не забудьте ознакомиться с лором!</p>
+            </div>
+
+            <div class="board-grid" id="mainGrid">
+                <a href="lore.html" class="dossier dossier--blue" id="card-1">
+                    <div class="pin pin--small"></div>
+                    <div class="dossier__tab">II</div>
+                    <div class="dossier__title">LOR</div>
+                    <div class="dossier__subtitle">Лор</div>
+                    <div class="dossier__desc">История Эгиды, география Провиденса, устройство Sub Aegide.</div>
+                </a>
+                <a href="chronology.html" class="dossier dossier--yellow" id="card-2">
+                    <div class="pin pin--small"></div>
+                    <div class="dossier__tab">III</div>
+                    <div class="dossier__title">CHRONIK</div>
+                    <div class="dossier__subtitle">Хронология</div>
+                    <div class="dossier__desc">От распада Австро-Венгрии до введения военного положения.</div>
+                </a>
+                <a href="factions.html" class="dossier dossier--green" id="card-3">
+                    <div class="pin pin--small"></div>
+                    <div class="dossier__tab">IV</div>
+                    <div class="dossier__title">PARTEIEN</div>
+                    <div class="dossier__subtitle">Фракции</div>
+                    <div class="dossier__desc">Партия «Под Эгидой», Сопротивление, беспартийные, криминал.</div>
+                </a>
+                <a href="characters.html" class="dossier dossier--red" id="card-4">
+                    <div class="pin pin--small"></div>
+                    <div class="dossier__tab">V</div>
+                    <div class="dossier__title">AKTEN</div>
+                    <div class="dossier__subtitle">Персонажи</div>
+                    <div class="dossier__desc">Публичные NPC, активные отвечающие и архивные дела.</div>
+                </a>
+            </div>
+        </main>
+
+        <footer class="board-footer">
+            <span>Республика Эгида · Провиденс · 1958</span>
+            <span>Форма 7-Б · Хранить 25 лет</span>
+        </footer>
+    </div>
+
+    <script src="js/threads.js"></script>
+</body>
+</html>
