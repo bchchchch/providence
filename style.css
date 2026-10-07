@@ -1156,6 +1156,6 @@ body {
   .passport-cover__emblem { font-size: 50px; }
   .passport-status-stamp { font-size: 18px; letter-spacing: 2px; padding: 8px 14px; }
   .passport-npc-stamp { font-size: 14px; letter-spacing: 3px; padding: 3px 10px; }
-  .passport-links-row { bottom: 40px; left: 8px; right: 8px; }
+  .passport-links-row { bottom: 80px; left: 8px; right: 8px; }
   .passport-footer { padding-bottom: 90px !important; }
 }
