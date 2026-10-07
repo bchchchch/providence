@@ -128,7 +128,7 @@ window.CHARACTERS = [
     name: "Остин Блюмен",
     is_npc: false,
     is_leader: false,
-    faction_ids: ["nii", "phoenix"],
+    faction_ids: ["phoenix"],
     profession: "Сотрудник ИЦ «Феникс»",
     rating: 0,
     show_rating: true,
