@@ -1,6 +1,6 @@
 /* ============================================================
-ШРИФТЫ
-============================================================ */
+   ШРИФТЫ
+   ============================================================ */
 @font-face {
   font-family: 'DreiFraktur';
   src: url('DreiFraktur.ttf') format('truetype');
@@ -10,8 +10,8 @@
 }
 
 /* ============================================================
-ПЕРЕМЕННЫЕ
-============================================================ */
+   ПЕРЕМЕННЫЕ
+   ============================================================ */
 :root {
   --cork: #8a6238;
   --cork-dark: #5e401f;
@@ -34,8 +34,8 @@
 }
 
 /* ============================================================
-БАЗА
-============================================================ */
+   БАЗА
+   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -48,8 +48,8 @@ body {
 }
 
 /* ============================================================
-ПРОБКОВАЯ ДОСКА
-============================================================ */
+   ПРОБКОВАЯ ДОСКА
+   ============================================================ */
 .corkboard {
   max-width: 1200px;
   margin: 0 auto;
@@ -94,8 +94,8 @@ body {
 }
 
 /* ============================================================
-КНОПКИ (pin)
-============================================================ */
+   КНОПКИ (pin)
+   ============================================================ */
 .pin {
   position: absolute;
   width: 22px;
@@ -122,9 +122,15 @@ body {
 .pin--small::after { top: 3px; left: 4px; width: 4px; height: 4px; }
 
 /* ============================================================
-ШАПКА
-============================================================ */
-.board-header { display: flex; justify-content: center; margin-bottom: 50px; position: relative; z-index: 2; }
+   ШАПКА
+   ============================================================ */
+.board-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
 .board-header__title-card {
   width: 100%;
   max-width: 720px;
@@ -147,13 +153,35 @@ body {
   margin-bottom: 12px;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.15), -1px -1px 0 rgba(255,255,255,0.25);
 }
-.board-subtitle { font-family: var(--font-mono); font-size: 13px; letter-spacing: 6px; color: var(--ink-soft); text-transform: uppercase; margin-bottom: 8px; }
-.board-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; color: var(--ink-faint); padding-top: 10px; border-top: 1px dashed var(--paper-edge); margin-top: 10px; }
+.board-subtitle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.board-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--ink-faint);
+  padding-top: 10px;
+  border-top: 1px dashed var(--paper-edge);
+  margin-top: 10px;
+}
 
 /* ============================================================
-НАВИГАЦИЯ
-============================================================ */
-.board-nav { display: flex; gap: 6px; margin-bottom: 40px; position: relative; z-index: 2; flex-wrap: wrap; }
+   НАВИГАЦИЯ
+   ============================================================ */
+.board-nav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
 .folder {
   flex: 1;
   min-width: 140px;
@@ -174,7 +202,10 @@ body {
 .folder:nth-child(3) { transform: rotate(-0.3deg); }
 .folder:nth-child(4) { transform: rotate(0.8deg); }
 .folder:nth-child(5) { transform: rotate(-0.6deg); }
-.folder:hover { transform: rotate(0deg) translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,0.7); }
+.folder:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.7);
+}
 .folder__tab {
   position: absolute;
   top: -10px;
@@ -190,18 +221,26 @@ body {
   text-transform: uppercase;
   border-radius: 3px 3px 0 0;
 }
-.folder__label { font-family: var(--font-display); font-size: 20px; letter-spacing: 2px; color: var(--ink); }
-.folder--active { background: var(--paper); box-shadow: 0 8px 18px rgba(0,0,0,0.65), inset 0 -3px 0 var(--stamp-red); }
+.folder__label {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+.folder--active {
+  background: var(--paper);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.65), inset 0 -3px 0 var(--stamp-red);
+}
 .folder--active .folder__label { color: var(--stamp-red); }
 
 /* ============================================================
-ОСНОВНОЙ КОНТЕНТ
-============================================================ */
+   ОСНОВНОЙ КОНТЕНТ
+   ============================================================ */
 .board-main { position: relative; z-index: 2; }
 
 /* ============================================================
-ЛИСТ-ДОСЬЕ
-============================================================ */
+   ЛИСТ-ДОСЬЕ
+   ============================================================ */
 .sheet {
   background: var(--paper);
   background-image: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.12), transparent 50%), radial-gradient(circle at 90% 10%, rgba(60,40,15,0.1), transparent 50%);
@@ -239,16 +278,43 @@ body {
   border-bottom: 2px solid var(--ink);
   position: relative;
 }
-.sheet__heading::after { content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 1px; background: var(--ink); opacity: 0.4; }
-.sheet__lead { font-size: 17px; font-style: italic; color: var(--ink); margin-bottom: 18px; padding-left: 20px; border-left: 3px solid var(--stamp-yellow); }
+.sheet__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.4;
+}
+.sheet__lead {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 18px;
+  padding-left: 20px;
+  border-left: 3px solid var(--stamp-yellow);
+}
 .sheet p { margin-bottom: 14px; text-align: justify; hyphens: auto; }
 .sheet strong { color: var(--stamp-red); }
 .sheet em { color: var(--stamp-blue); font-style: italic; }
-.sheet__footer { display: flex; justify-content: space-between; margin-top: 30px; padding-top: 14px; border-top: 1px dashed var(--paper-edge); font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.sheet__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--paper-edge);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
 /* ============================================================
-СТИКЕР
-============================================================ */
+   СТИКЕР
+   ============================================================ */
 .sticky-note {
   display: inline-block;
   background: var(--paper-yellow);
@@ -267,9 +333,14 @@ body {
 .sticky-note p { margin: 0; }
 
 /* ============================================================
-СЕТКА ДОСЬЕ
-============================================================ */
-.board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; margin-top: 20px; }
+   СЕТКА ДОСЬЕ
+   ============================================================ */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
 .dossier {
   display: block;
   background: var(--paper);
@@ -287,7 +358,10 @@ body {
 .dossier:nth-child(2) { transform: rotate(-0.7deg); }
 .dossier:nth-child(3) { transform: rotate(0.9deg); }
 .dossier:nth-child(4) { transform: rotate(-0.4deg); }
-.dossier:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.8); }
+.dossier:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.8);
+}
 .dossier--blue   { border-top: 6px solid var(--stamp-blue); }
 .dossier--green  { border-top: 6px solid var(--stamp-green); }
 .dossier--red    { border-top: 6px solid var(--stamp-red); }
@@ -314,13 +388,34 @@ body {
 .dossier--green  .dossier__tab { background: var(--stamp-green);  color: var(--paper); }
 .dossier--red    .dossier__tab { background: var(--stamp-red);    color: var(--paper); }
 .dossier--yellow .dossier__tab { background: var(--stamp-yellow); color: var(--ink); }
-.dossier__title { font-family: var(--font-display); font-size: 32px; font-weight: normal; letter-spacing: 4px; color: var(--ink); margin-bottom: 4px; line-height: 1; }
-.dossier__subtitle { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--paper-edge); }
-.dossier__desc { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+.dossier__title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.dossier__subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--paper-edge);
+}
+.dossier__desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
 
 /* ============================================================
-ПОДВАЛ
-============================================================ */
+   ПОДВАЛ
+   ============================================================ */
 .board-footer {
   margin-top: 50px;
   padding: 16px 24px;
@@ -338,17 +433,48 @@ body {
 }
 
 /* ============================================================
-ФИЛЬТРАЦИЯ ПЕРСОНАЖЕЙ
-============================================================ */
-.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 3px; border: 1px solid var(--paper-edge); }
-.filter-btn { background: var(--paper-dark); border: 1px solid var(--paper-edge); color: var(--ink); padding: 8px 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
-.filter-btn:hover { background: var(--paper); transform: translateY(-2px); }
-.filter-btn.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+   ФИЛЬТРАЦИЯ
+   ============================================================ */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  border: 1px solid var(--paper-edge);
+}
+.filter-btn {
+  background: var(--paper-dark);
+  border: 1px solid var(--paper-edge);
+  color: var(--ink);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-btn:hover {
+  background: var(--paper);
+  transform: translateY(-2px);
+}
+.filter-btn.is-active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
 .filter-btn__symbol { font-size: 14px; }
 
 /* ============================================================
-МОДАЛЬНОЕ ОКНО ПАСПОРТА
-============================================================ */
+   МОДАЛЬНОЕ ОКНО ПАСПОРТА
+   ============================================================ */
 .passport-modal {
   position: fixed;
   inset: 0;
@@ -361,12 +487,20 @@ body {
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
-.passport-modal.is-open { opacity: 1; pointer-events: auto; }
-.passport-modal__overlay { position: absolute; inset: 0; background: rgba(20, 17, 12, 0.92); backdrop-filter: blur(6px); }
+.passport-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.passport-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 17, 12, 0.92);
+  backdrop-filter: blur(6px);
+}
 
 /* ============================================================
-КНИГА ПАСПОРТА
-============================================================ */
+   КНИГА ПАСПОРТА (ДЕСКТОП)
+   ============================================================ */
 .passport-book {
   position: relative;
   width: 1000px;
@@ -377,7 +511,9 @@ body {
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: visible;
 }
-.passport-modal.is-open .passport-book { transform: translateX(0); }
+.passport-modal.is-open .passport-book {
+  transform: translateX(0);
+}
 
 .passport-close {
   position: absolute;
@@ -400,12 +536,17 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   opacity: 0;
 }
-.passport-modal.is-open .passport-close { opacity: 1; transition: transform 0.2s, opacity 0.3s ease 0.8s; }
-.passport-close:hover { transform: scale(1.1) rotate(90deg); }
+.passport-modal.is-open .passport-close {
+  opacity: 1;
+  transition: transform 0.2s, opacity 0.3s ease 0.8s;
+}
+.passport-close:hover {
+  transform: scale(1.1) rotate(90deg);
+}
 
 /* ============================================================
-ОБЛОЖКА (правая половина, переворачивается влево)
-============================================================ */
+   ОБЛОЖКА
+   ============================================================ */
 .passport-cover {
   position: absolute;
   top: 0;
@@ -419,7 +560,9 @@ body {
   z-index: 20;
   box-shadow: 5px 5px 30px rgba(0,0,0,0.6);
 }
-.passport-modal.is-open .passport-cover { transform: rotateY(-180deg); }
+.passport-modal.is-open .passport-cover {
+  transform: rotateY(-180deg);
+}
 .passport-cover__front,
 .passport-cover__back {
   position: absolute;
@@ -428,8 +571,6 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
-
-
 .passport-cover__front {
   background: linear-gradient(160deg, #5a1a1a 0%, #3a0808 40%, #1a0404 100%);
   background-image:
@@ -455,8 +596,6 @@ body {
 .passport-cover__title { font-family: var(--font-display); font-size: 34px; letter-spacing: 6px; color: #d4af37; text-shadow: 1px 2px 4px rgba(0,0,0,0.8); margin-bottom: 12px; }
 .passport-cover__subtitle { font-family: var(--font-mono); font-size: 13px; letter-spacing: 5px; color: #b8941f; text-transform: uppercase; margin-bottom: 40px; }
 .passport-cover__year { font-family: var(--font-display); font-size: 22px; color: #d4af37; letter-spacing: 4px; opacity: 0.6; }
-
-
 .passport-cover__back {
   background: var(--paper-dark);
   transform: rotateY(180deg);
@@ -465,10 +604,10 @@ body {
 }
 
 /* ============================================================
-МОБИЛЬНОЕ ФОТО (вне обложки, скрыто на десктопе)
-============================================================ */
+   МОБИЛЬНОЕ ФОТО (скрыто на десктопе)
+   ============================================================ */
 .passport-mobile-photo {
-  display: none; 
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -480,8 +619,8 @@ body {
 }
 
 /* ============================================================
-ПРАВАЯ СТРАНИЦА (информация, фиксированный размер)
-============================================================ */
+   ПРАВАЯ СТРАНИЦА (ДЕСКТОП)
+   ============================================================ */
 .passport-page--right {
   position: absolute;
   top: 0;
@@ -501,11 +640,14 @@ body {
   transform: translateX(20px);
   transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
 }
-.passport-modal.is-open .passport-page--right { opacity: 1; transform: translateX(0); }
+.passport-modal.is-open .passport-page--right {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* ============================================================
-ФОТО (общие стили для десктопного и мобильного)
-============================================================ */
+   ФОТО И ЭЛЕМЕНТЫ НА ФОТО
+   ============================================================ */
 .passport-photo-full,
 .passport-mobile-photo {
   width: 100%;
@@ -535,8 +677,6 @@ body {
   opacity: 0.6;
   line-height: 1.4;
 }
-
-
 .passport-status-stamp {
   position: absolute;
   top: 50%;
@@ -555,8 +695,6 @@ body {
   pointer-events: none;
   white-space: nowrap;
 }
-
-
 .passport-rating-sticker {
   position: absolute;
   bottom: 20px;
@@ -589,8 +727,8 @@ body {
 .passport-rating-value.neutral { color: var(--ink-soft); }
 
 /* ============================================================
-ПРАВАЯ СТРАНИЦА: КОНТЕНТ
-============================================================ */
+   ПРАВАЯ СТРАНИЦА: КОНТЕНТ
+   ============================================================ */
 .passport-header { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid var(--ink); position: relative; }
 .passport-header::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--ink); opacity: 0.3; }
 .passport-faction { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
@@ -614,103 +752,199 @@ body {
 .passport-note { font-family: var(--font-mono); font-size: 10px; color: var(--stamp-red); font-style: italic; text-align: center; }
 
 /* ============================================================
-МОБИЛЬНАЯ АДАПТАЦИЯ (≤900px)
-============================================================ */
-@media (max-width: 900px) {
-  .passport-modal { padding: 0; align-items: stretch; }
-  
-  .passport-book {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-    transform: translateX(0) !important;
-    overflow: hidden;
-  }
-  .passport-modal.is-open .passport-book { transform: translateX(0) !important; }
-  
-  .passport-close { position: fixed; top: 15px; right: 15px; z-index: 1001; width: 44px; height: 44px; font-size: 28px; }
-  
-  
-  .passport-cover { width: 100% !important; height: 100% !important; }
-  
-  
-  .passport-cover__back .passport-photo-full { display: none !important; }
-  
-  
-  .passport-mobile-photo {
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 45vh !important;
-    min-height: 280px;
-    max-height: 400px;
-    z-index: 5;
-    border-bottom: 3px solid var(--paper-edge);
-  }
-  
-  
-  .passport-page--right {
-    width: 100% !important;
-    height: 100% !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: calc(45vh + 20px) 20px 140px !important; 
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    opacity: 0;
-    transform: none;
-    transition: opacity 0.4s ease 0.6s;
-  }
-  .passport-modal.is-open .passport-page--right { opacity: 1; }
-  
-  .passport-name { font-size: 26px; }
-  .passport-status-stamp { font-size: 22px; letter-spacing: 3px; padding: 10px 20px; }
-  .passport-npc-stamp { font-size: 15px; letter-spacing: 4px; }
-  .passport-rating-sticker { bottom: 15px; right: 15px; padding: 10px 14px; }
-  .passport-rating-value { font-size: 26px; }
-  .passport-cover__title { font-size: 28px; }
-  .passport-cover__emblem { font-size: 60px; }
-  
-  
-  .passport-links-row {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    margin: 0;
-    padding: 12px 15px;
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    background: var(--paper);
-    border-top: 2px solid var(--paper-edge);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
-    display: flex;
-    gap: 8px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  .passport-link-btn { flex: 1; min-width: 0; justify-content: center; padding: 12px 8px; font-size: 11px; white-space: nowrap; }
-  .passport-footer { padding-bottom: 120px !important; border-top: none; margin-top: 10px; }
+   ХРОНОЛОГИЯ
+   ============================================================ */
+.timeline-container {
+  position: relative;
+  padding: 40px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--paper-edge) transparent;
 }
+.timeline-container::-webkit-scrollbar { height: 8px; }
+.timeline-container::-webkit-scrollbar-track { background: transparent; }
+.timeline-container::-webkit-scrollbar-thumb { background: var(--paper-edge); border-radius: 4px; }
+.timeline-track { display: flex; gap: 0; min-width: max-content; padding: 20px 40px; align-items: flex-start; }
+.timeline-card {
+  position: relative;
+  flex: 0 0 280px;
+  background: var(--paper);
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.12), transparent 50%);
+  border: 2px solid var(--paper-edge);
+  border-top: 6px solid var(--stamp-red);
+  padding: 30px 24px 24px;
+  margin-right: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.65);
+  transform: rotate(-0.5deg);
+}
+.timeline-card:nth-child(even) { transform: rotate(0.5deg); }
+.timeline-card:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.8); }
+.timeline-card__pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d04040 0%, #7a1414 45%, #3a0808 100%);
+  box-shadow: 0 3px 7px rgba(0,0,0,0.75), inset -2px -2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(255,255,255,0.2);
+}
+.timeline-card__pin::after { content: ''; position: absolute; top: 4px; left: 6px; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.55); filter: blur(0.5px); }
+.timeline-card__year { font-family: var(--font-display); font-size: 32px; font-weight: bold; letter-spacing: 2px; margin-bottom: 12px; text-align: center; }
+.timeline-card__title { font-family: var(--font-display); font-size: 22px; letter-spacing: 1px; color: var(--ink); margin-bottom: 10px; line-height: 1.2; }
+.timeline-card__desc { font-size: 14px; color: var(--ink-soft); line-height: 1.5; text-align: justify; }
+.timeline-thread { position: absolute; top: 50%; right: -60px; width: 60px; height: 3px; transform: translateY(-50%); z-index: 1; }
 
-@media (max-width: 480px) {
-  .passport-mobile-photo { height: 40vh !important; min-height: 240px; }
-  .passport-page--right { padding-top: calc(40vh + 15px) !important; padding-left: 15px !important; padding-right: 15px !important; }
-  .passport-name { font-size: 22px; }
-  .passport-rating-value { font-size: 24px; }
-  .passport-cover__title { font-size: 24px; letter-spacing: 4px; }
-  .passport-cover__emblem { font-size: 50px; }
-  .passport-status-stamp { font-size: 18px; letter-spacing: 2px; padding: 8px 14px; }
-  .passport-npc-stamp { font-size: 14px; letter-spacing: 3px; padding: 3px 10px; }
+.timeline-detail-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--paper);
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.1), transparent 50%);
+  border-top: 3px solid var(--paper-edge);
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.timeline-detail-panel.is-open { transform: translateY(0); }
+.detail-close { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; background: var(--stamp-red); color: var(--paper); border: none; border-radius: 50%; font-size: 28px; line-height: 1; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+.detail-close:hover { transform: scale(1.1) rotate(90deg); }
+.detail-content { display: flex; gap: 30px; padding: 40px 50px; max-width: 1200px; margin: 0 auto; }
+.detail-image { flex: 0 0 300px; max-height: 400px; overflow: hidden; border: 2px solid var(--paper-edge); box-shadow: 0 8px 22px rgba(0,0,0,0.6); }
+.detail-image img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.3) contrast(1.1); }
+.detail-text { flex: 1; }
+.detail-year { font-family: var(--font-display); font-size: 48px; font-weight: bold; letter-spacing: 3px; margin-bottom: 16px; }
+.detail-title { font-family: var(--font-display); font-size: 36px; font-weight: normal; letter-spacing: 2px; color: var(--ink); margin-bottom: 20px; line-height: 1.2; }
+.detail-desc { font-size: 16px; line-height: 1.7; color: var(--ink); text-align: justify; hyphens: auto; }
+
+.timeline-card--new { position: relative; z-index: 5; }
+.timeline-card--new::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: -12px; right: -12px; bottom: -12px;
+  border: 3px solid var(--stamp-red);
+  border-radius: 50% 45% 55% 48% / 48% 52% 45% 55%;
+  transform: rotate(-3deg);
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(110, 20, 20, 0.3), inset 0 0 20px rgba(110, 20, 20, 0.1);
+  animation: markerPulse 2s ease-in-out infinite;
+}
+.timeline-card--new::after {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px; right: -8px; bottom: -8px;
+  border: 2px solid rgba(110, 20, 20, 0.4);
+  border-radius: 45% 50% 48% 52% / 52% 48% 55% 45%;
+  transform: rotate(2deg);
+  pointer-events: none;
+  z-index: -1;
+}
+@keyframes markerPulse {
+  0%, 100% { opacity: 1; transform: rotate(-3deg) scale(1); }
+  50% { opacity: 0.85; transform: rotate(-3deg) scale(1.02); }
 }
 
 /* ============================================================
-АДАПТИВ САЙТА (≤720px)
-============================================================ */
+   ФРАКЦИИ
+   ============================================================ */
+.factions-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+.faction-card { padding: 48px 28px 32px; cursor: pointer; min-height: 220px; display: flex; flex-direction: column; }
+.faction-card__name { font-family: var(--font-display); font-size: 26px; font-weight: normal; letter-spacing: 1px; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+.faction-card__tag { font-family: var(--font-mono); font-size: 12px; color: var(--stamp-blue); margin-bottom: 10px; }
+.faction-card__type { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--paper-edge); }
+.faction-card__desc { font-size: 14px; color: var(--ink-soft); line-height: 1.5; flex: 1; }
+
+.faction-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+.faction-modal.is-open { opacity: 1; pointer-events: auto; }
+.faction-modal__overlay { position: absolute; inset: 0; background: rgba(20, 17, 12, 0.92); backdrop-filter: blur(6px); }
+.faction-detail-sheet { position: relative; width: 100%; max-width: 800px; max-height: 85vh; background: var(--paper); background-image: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.1), transparent 50%); border: 1px solid var(--paper-edge); box-shadow: 0 20px 60px rgba(0,0,0,0.8); padding: 40px 50px; overflow-y: auto; transform: translateY(30px) scale(0.95); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.faction-modal.is-open .faction-detail-sheet { transform: translateY(0) scale(1); }
+.faction-close { position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; background: var(--stamp-red); color: var(--paper); border: none; border-radius: 50%; font-size: 28px; line-height: 1; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
+.faction-close:hover { transform: scale(1.1) rotate(90deg); }
+.faction-detail__header { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 2px solid var(--ink); position: relative; }
+.faction-detail__header::after { content: ''; position: absolute; bottom: -5px; left: 0; right: 0; height: 1px; background: var(--ink); opacity: 0.3; }
+.faction-detail__tag { font-family: var(--font-mono); font-size: 13px; letter-spacing: 2px; margin-bottom: 8px; font-weight: bold; }
+.faction-detail__name { font-family: var(--font-display); font-size: 36px; font-weight: normal; letter-spacing: 2px; color: var(--ink); line-height: 1.1; margin-bottom: 12px; }
+.faction-detail__type { font-family: var(--font-mono); font-size: 12px; color: var(--stamp-red); letter-spacing: 1px; text-transform: uppercase; }
+.faction-detail__desc { font-size: 16px; line-height: 1.7; color: var(--ink); text-align: justify; margin-bottom: 30px; white-space: pre-line; }
+.faction-detail__roster-title { font-family: var(--font-display); font-size: 24px; letter-spacing: 2px; color: var(--ink); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px dashed var(--paper-edge); }
+.roster-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 12px 0; border-bottom: 1px dotted var(--paper-edge); gap: 20px; }
+.roster-title { font-family: var(--font-body); font-size: 15px; font-weight: bold; color: var(--ink); flex: 1; }
+.roster-leader-badge { display: inline-block; font-family: var(--font-mono); font-size: 10px; color: var(--stamp-yellow); border: 1px solid var(--stamp-yellow); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+.roster-npc-badge { display: inline-block; font-family: var(--font-mono); font-size: 10px; color: var(--stamp-blue); border: 1px solid var(--stamp-blue); padding: 2px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+.roster-char { flex: 1; text-align: right; font-family: var(--font-mono); font-size: 13px; }
+.roster-char-link { color: var(--stamp-blue); text-decoration: none; border-bottom: 1px dashed var(--stamp-blue); cursor: pointer; transition: all 0.2s; }
+.roster-char-link:hover { background: var(--stamp-blue); color: var(--paper); padding: 2px 6px; border-radius: 2px; border-bottom-color: transparent; }
+.roster-reserved { color: var(--ink-faint); font-style: italic; }
+.roster-vacant { color: var(--stamp-green); font-style: italic; }
+.roster-empty { font-family: var(--font-body); font-size: 15px; font-style: italic; color: var(--ink-faint); text-align: center; padding: 20px; }
+
+.faction-hierarchy { display: flex; flex-direction: column; gap: 40px; position: relative; padding: 20px 0; }
+.faction-row { display: flex; gap: 60px; align-items: flex-start; position: relative; }
+.faction-card--main { flex: 0 0 320px; padding: 48px 28px 32px; min-height: 200px; display: flex; flex-direction: column; cursor: pointer; background: var(--paper); border: 1px solid var(--paper-edge); border-top: 6px solid; box-shadow: 0 8px 22px rgba(0,0,0,0.65); transform: rotate(-0.5deg); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.faction-card--main:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.8); }
+.faction-card--sub { flex: 0 0 280px; padding: 40px 24px 28px; min-height: 180px; display: flex; flex-direction: column; cursor: pointer; background: var(--paper-dark); border: 1px solid var(--paper-edge); border-top: 4px solid; box-shadow: 0 6px 18px rgba(0,0,0,0.55); transform: rotate(0.5deg); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.faction-card--sub:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.7); }
+.faction-card__symbol { position: absolute; top: -14px; left: 22px; width: 38px; height: 38px; font-family: var(--font-display); font-size: 22px; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 3px 8px rgba(0,0,0,0.55); transform: rotate(-6deg); border: 1px solid var(--paper-edge); }
+.faction-card--main .faction-card__name { font-size: 26px; }
+.faction-sub-container { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+.faction-threads { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.faction-thread-line { stroke: var(--thread); stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7)); opacity: 0.85; }
+
+/* ============================================================
+   ПЕЧАТИ НА КАРТОЧКАХ ПЕРСОНАЖЕЙ
+   ============================================================ */
+.card-status-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-14deg);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 3px double currentColor;
+  background: transparent;
+  z-index: 5;
+  text-shadow: 1px 1px 0 rgba(216, 206, 176, 0.3), -1px -1px 0 rgba(216, 206, 176, 0.3);
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+.card-npc-stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: var(--stamp-blue);
+  border: 2px solid var(--stamp-blue);
+  padding: 3px 10px;
+  transform: rotate(8deg);
+  opacity: 0.85;
+  background: transparent;
+  z-index: 5;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  text-shadow: 1px 1px 0 rgba(216, 206, 176, 0.3);
+}
+
+/* ============================================================
+   АДАПТИВ САЙТА (≤720px)
+   ============================================================ */
 @media (max-width: 720px) {
   body { padding: 8px; }
   .corkboard { padding: 22px 16px 28px; border-width: 8px; }
@@ -735,951 +969,193 @@ body {
 }
 
 /* ============================================================
-   УМЕНЬШЕНИЕ ОТСТУПОВ НА МОБИЛЬНОЙ ВЕРСИИ
-   ============================================================ */
-@media (max-width: 900px) {
-  
-  .passport-page--right {
-    padding-top: calc(45vh + 10px) !important;
-  }
-
-  
-  .passport-page--right {
-    padding-bottom: 100px !important;
-  }
-
-  
-  .passport-page--right {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  
-  .passport-section {
-    margin-bottom: 12px !important;
-  }
-
-  .passport-section__title {
-    margin-bottom: 6px !important;
-  }
-
-  
-  .passport-header {
-    margin-bottom: 14px !important;
-    padding-bottom: 10px !important;
-  }
-
-  .passport-name {
-    margin-bottom: 6px !important;
-  }
-
-  .passport-npc-stamp {
-    margin-bottom: 6px !important;
-  }
-
-  
-  .passport-mobile-photo {
-    height: 38vh !important;
-    min-height: 240px !important;
-  }
-
-  
-  .passport-links-row {
-    padding: 8px 12px !important;
-    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px)) !important;
-  }
-
-  .passport-footer {
-    padding-bottom: 90px !important;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .passport-page--right {
-    padding-top: calc(38vh + 8px) !important;
-    padding-bottom: 90px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-
-  .passport-mobile-photo {
-    height: 35vh !important;
-    min-height: 220px !important;
-  }
-}
-
-/* ============================================================
-   УМЕНЬШЕНИЕ КНОПОК НАВИГАЦИИ НА МОБИЛЬНЫХ
-   ============================================================ */
-@media (max-width: 720px) {
-  
-  .folder {
-    min-width: 55px !important;
-    padding: 10px 4px 8px !important;
-  }
-
-  
-  .folder__label {
-    font-size: 10px !important;
-    letter-spacing: 0.5px !important;
-  }
-
-  
-  .folder__tab {
-    font-size: 7px !important;
-    padding: 1px 5px !important;
-    top: -8px !important;
-    left: 5px !important;
-  }
-
-  
-  .board-nav {
-    gap: 3px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .folder {
-    min-width: 45px !important;
-    padding: 8px 3px 6px !important;
-  }
-
-  .folder__label {
-    font-size: 8px !important;
-    letter-spacing: 0 !important;
-  }
-
-  .folder__tab {
-    font-size: 6px !important;
-    padding: 1px 3px !important;
-  }
-}
-
-/* ============================================================
-   ХРОНОЛОГИЯ — ГОРИЗОНТАЛЬНЫЙ ТАЙМЛАЙН
-   ============================================================ */
-.timeline-container {
-    position: relative;
-    padding: 40px 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--paper-edge) transparent;
-}
-
-.timeline-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.timeline-container::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.timeline-container::-webkit-scrollbar-thumb {
-    background: var(--paper-edge);
-    border-radius: 4px;
-}
-
-.timeline-track {
-    display: flex;
-    gap: 0;
-    min-width: max-content;
-    padding: 20px 40px;
-    align-items: flex-start;
-}
-
-.timeline-card {
-    position: relative;
-    flex: 0 0 280px;
-    background: var(--paper);
-    background-image: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.12), transparent 50%);
-    border: 2px solid var(--paper-edge);
-    border-top: 6px solid var(--stamp-red);
-    padding: 30px 24px 24px;
-    margin-right: 60px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.65);
-    transform: rotate(-0.5deg);
-}
-
-.timeline-card:nth-child(even) {
-    transform: rotate(0.5deg);
-}
-
-.timeline-card:hover {
-    transform: rotate(0deg) translateY(-6px);
-    box-shadow: 0 16px 36px rgba(0,0,0,0.8);
-}
-
-.timeline-card__pin {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #d04040 0%, #7a1414 45%, #3a0808 100%);
-    box-shadow: 0 3px 7px rgba(0,0,0,0.75), inset -2px -2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(255,255,255,0.2);
-}
-
-.timeline-card__pin::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.55);
-    filter: blur(0.5px);
-}
-
-.timeline-card__year {
-    font-family: var(--font-display);
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.timeline-card__title {
-    font-family: var(--font-display);
-    font-size: 22px;
-    letter-spacing: 1px;
-    color: var(--ink);
-    margin-bottom: 10px;
-    line-height: 1.2;
-}
-
-.timeline-card__desc {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-    text-align: justify;
-}
-
-
-.timeline-thread {
-    position: absolute;
-    top: 50%;
-    right: -60px;
-    width: 60px;
-    height: 3px;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-/* ============================================================
-   ПАНЕЛЬ ПОДРОБНОСТЕЙ (ВЫЕЗЖАЕТ СНИЗУ)
-   ============================================================ */
-.timeline-detail-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: var(--paper);
-    background-image: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.1), transparent 50%);
-    border-top: 3px solid var(--paper-edge);
-    box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
-    transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    max-height: 70vh;
-    overflow-y: auto;
-}
-
-.timeline-detail-panel.is-open {
-    transform: translateY(0);
-}
-
-.detail-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 36px;
-    height: 36px;
-    background: var(--stamp-red);
-    color: var(--paper);
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-.detail-close:hover {
-    transform: scale(1.1) rotate(90deg);
-}
-
-.detail-content {
-    display: flex;
-    gap: 30px;
-    padding: 40px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.detail-image {
-    flex: 0 0 300px;
-    max-height: 400px;
-    overflow: hidden;
-    border: 2px solid var(--paper-edge);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.6);
-}
-
-.detail-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(0.3) contrast(1.1);
-}
-
-.detail-text {
-    flex: 1;
-}
-
-.detail-year {
-    font-family: var(--font-display);
-    font-size: 48px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
-}
-
-.detail-title {
-    font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    color: var(--ink);
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.detail-desc {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--ink);
-    text-align: justify;
-    hyphens: auto;
-}
-
-/* ============================================================
    АДАПТИВ ХРОНОЛОГИИ
    ============================================================ */
 @media (max-width: 900px) {
-    .timeline-card {
-        flex: 0 0 240px;
-        padding: 24px 20px 20px;
-        margin-right: 50px;
-    }
-
-    .timeline-thread {
-        right: -50px;
-        width: 50px;
-    }
-
-    .timeline-card__year {
-        font-size: 28px;
-    }
-
-    .timeline-card__title {
-        font-size: 20px;
-    }
-
-    .detail-content {
-        flex-direction: column;
-        padding: 30px 20px 80px;
-    }
-
-    .detail-image {
-        flex: none;
-        width: 100%;
-        max-height: 300px;
-    }
-
-    .detail-year {
-        font-size: 36px;
-    }
-
-    .detail-title {
-        font-size: 28px;
-    }
-
-    .detail-desc {
-        font-size: 15px;
-    }
+  .timeline-card { flex: 0 0 240px; padding: 24px 20px 20px; margin-right: 50px; }
+  .timeline-thread { right: -50px; width: 50px; }
+  .timeline-card__year { font-size: 28px; }
+  .timeline-card__title { font-size: 20px; }
+  .detail-content { flex-direction: column; padding: 30px 20px 80px; }
+  .detail-image { flex: none; width: 100%; max-height: 300px; }
+  .detail-year { font-size: 36px; }
+  .detail-title { font-size: 28px; }
+  .detail-desc { font-size: 15px; }
 }
-
 @media (max-width: 720px) {
-    .timeline-card {
-        flex: 0 0 200px;
-        padding: 20px 16px 16px;
-        margin-right: 40px;
-    }
-
-    .timeline-thread {
-        right: -40px;
-        width: 40px;
-    }
-
-    .timeline-card__year {
-        font-size: 24px;
-    }
-
-    .timeline-card__title {
-        font-size: 18px;
-    }
-
-    .timeline-card__desc {
-        font-size: 13px;
-    }
-
-    .detail-year {
-        font-size: 32px;
-    }
-
-    .detail-title {
-        font-size: 24px;
-    }
-
-    .detail-desc {
-        font-size: 14px;
-    }
+  .timeline-card { flex: 0 0 200px; padding: 20px 16px 16px; margin-right: 40px; }
+  .timeline-thread { right: -40px; width: 40px; }
+  .timeline-card__year { font-size: 24px; }
+  .timeline-card__title { font-size: 18px; }
+  .timeline-card__desc { font-size: 13px; }
+  .detail-year { font-size: 32px; }
+  .detail-title { font-size: 24px; }
+  .detail-desc { font-size: 14px; }
+  .timeline-card--new::before { top: -8px; left: -8px; right: -8px; bottom: -8px; border-width: 2px; }
+  .timeline-card--new::after { top: -5px; left: -5px; right: -5px; bottom: -5px; border-width: 1.5px; }
 }
 
 /* ============================================================
-   МАРКЕР "НОВОЕ СОБЫТИЕ" — красный нарисованный кружок
+   АДАПТИВ ФРАКЦИЙ
    ============================================================ */
-.timeline-card--new {
-    position: relative;
-    z-index: 5;
+@media (max-width: 900px) {
+  .faction-row { flex-direction: column; gap: 30px; }
+  .faction-card--main, .faction-card--sub { flex: 0 0 auto; width: 100%; }
+  .faction-threads { display: none; }
+  .faction-detail-sheet { padding: 30px 20px; max-height: 90vh; }
+  .faction-detail__name { font-size: 28px; }
+  .roster-row { flex-direction: column; gap: 6px; }
+  .roster-char { text-align: left; }
+  .faction-card { min-height: 200px; }
+  .faction-card__name { font-size: 20px; }
 }
 
-
-.timeline-card--new::before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    right: -12px;
-    bottom: -12px;
-    border: 3px solid var(--stamp-red);
-    border-radius: 50% 45% 55% 48% / 48% 52% 45% 55%;
-    transform: rotate(-3deg);
-    pointer-events: none;
-    z-index: -1;
-    box-shadow: 
-        0 0 0 2px rgba(110, 20, 20, 0.3),
-        inset 0 0 20px rgba(110, 20, 20, 0.1);
-    animation: markerPulse 2s ease-in-out infinite;
-}
-
-
-.timeline-card--new::after {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border: 2px solid rgba(110, 20, 20, 0.4);
-    border-radius: 45% 50% 48% 52% / 52% 48% 55% 45%;
-    transform: rotate(2deg);
-    pointer-events: none;
-    z-index: -1;
-}
-
-
-@keyframes markerPulse {
-    0%, 100% {
-        opacity: 1;
-        transform: rotate(-3deg) scale(1);
-    }
-    50% {
-        opacity: 0.85;
-        transform: rotate(-3deg) scale(1.02);
-    }
-}
-
-
+/* ============================================================
+   АДАПТИВ ПЕЧАТЕЙ НА КАРТОЧКАХ
+   ============================================================ */
 @media (max-width: 720px) {
-    .timeline-card--new::before {
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-        border-width: 2px;
-    }
-    
-    .timeline-card--new::after {
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        border-width: 1.5px;
-    }
+  .card-npc-stamp { font-size: 13px; letter-spacing: 3px; padding: 2px 8px; top: 10px; right: 10px; }
+  .card-status-stamp { font-size: 14px; letter-spacing: 2px; padding: 6px 12px; }
 }
 
 /* ============================================================
-   ФРАКЦИИ: УВЕЛИЧЕННЫЕ КАРТОЧКИ
+   АДАПТИВ НАВИГАЦИИ (дополнительно)
    ============================================================ */
-.factions-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 35px;
+@media (max-width: 720px) {
+  .folder { min-width: 55px !important; padding: 10px 4px 8px !important; }
+  .folder__label { font-size: 10px !important; letter-spacing: 0.5px !important; }
+  .folder__tab { font-size: 7px !important; padding: 1px 5px !important; top: -8px !important; left: 5px !important; }
+  .board-nav { gap: 3px !important; margin-bottom: 20px !important; }
 }
-
-.faction-card {
-    padding: 48px 28px 32px;
-    cursor: pointer;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-}
-
-.faction-card__name {
-    font-family: var(--font-display);
-    font-size: 26px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: var(--ink);
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.faction-card__tag {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--stamp-blue);
-    margin-bottom: 10px;
-}
-
-.faction-card__type {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--ink-faint);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 14px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--paper-edge);
-}
-
-.faction-card__desc {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-    flex: 1;
+@media (max-width: 400px) {
+  .folder { min-width: 45px !important; padding: 8px 3px 6px !important; }
+  .folder__label { font-size: 8px !important; letter-spacing: 0 !important; }
+  .folder__tab { font-size: 6px !important; padding: 1px 3px !important; }
 }
 
 /* ============================================================
-   МОДАЛЬНОЕ ОКНО ФРАКЦИИ
+   ★★★ МОБИЛЬНАЯ АДАПТАЦИЯ ПАСПОРТА (ЕДИНЫЙ БЛОК) ★★★
    ============================================================ */
-.faction-modal {
+@media (max-width: 900px) {
+
+  .passport-modal { padding: 0; align-items: stretch; }
+
+
+  .passport-book {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    transform: translateX(0) !important;
+    overflow: hidden;
+  }
+  .passport-modal.is-open .passport-book { transform: translateX(0) !important; }
+
+
+  .passport-close {
     position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-}
-
-.faction-modal.is-open {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.faction-modal__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(20, 17, 12, 0.92);
-    backdrop-filter: blur(6px);
-}
-
-.faction-detail-sheet {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    max-height: 85vh;
-    background: var(--paper);
-    background-image: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%), radial-gradient(circle at 10% 90%, rgba(60,40,15,0.1), transparent 50%);
-    border: 1px solid var(--paper-edge);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-    padding: 40px 50px;
-    overflow-y: auto;
-    transform: translateY(30px) scale(0.95);
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.faction-modal.is-open .faction-detail-sheet {
-    transform: translateY(0) scale(1);
-}
-
-.faction-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 36px;
-    height: 36px;
-    background: var(--stamp-red);
-    color: var(--paper);
-    border: none;
-    border-radius: 50%;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
     font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
-
-.faction-close:hover {
-    transform: scale(1.1) rotate(90deg);
-}
-
-.faction-detail__header {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--ink);
-    position: relative;
-}
-
-.faction-detail__header::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--ink);
-    opacity: 0.3;
-}
-
-.faction-detail__tag {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.faction-detail__name {
-    font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    color: var(--ink);
-    line-height: 1.1;
-    margin-bottom: 12px;
-}
-
-.faction-detail__type {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--stamp-red);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.faction-detail__desc {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--ink);
-    text-align: justify;
-    margin-bottom: 30px;
-    white-space: pre-line;
-}
-
-.faction-detail__roster-title {
-    font-family: var(--font-display);
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: var(--ink);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed var(--paper-edge);
-}
-
-.roster-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 12px 0;
-    border-bottom: 1px dotted var(--paper-edge);
-    gap: 20px;
-}
-
-.roster-title {
-    font-family: var(--font-body);
-    font-size: 15px;
-    font-weight: bold;
-    color: var(--ink);
-    flex: 1;
-}
-
-.roster-leader-badge {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--stamp-yellow);
-    border: 1px solid var(--stamp-yellow);
-    padding: 2px 6px;
-    border-radius: 2px;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-.roster-char {
-    flex: 1;
-    text-align: right;
-    font-family: var(--font-mono);
-    font-size: 13px;
-}
-
-.roster-char-link {
-    color: var(--stamp-blue);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--stamp-blue);
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.roster-char-link:hover {
-    background: var(--stamp-blue);
-    color: var(--paper);
-    padding: 2px 6px;
-    border-radius: 2px;
-    border-bottom-color: transparent;
-}
-
-.roster-reserved {
-    color: var(--ink-faint);
-    font-style: italic;
-}
-
-.roster-vacant {
-    color: var(--stamp-green);
-    font-style: italic;
-}
+  }
 
 
-@media (max-width: 720px) {
-    .faction-detail-sheet {
-        padding: 30px 20px;
-        max-height: 90vh;
-    }
-    .faction-detail__name { font-size: 28px; }
-    .roster-row { flex-direction: column; gap: 6px; }
-    .roster-char { text-align: left; }
-}
-
-/* ============================================================
-   ФРАКЦИИ: ИЕРАРХИЯ С НИТЯМИ
-   ============================================================ */
-.faction-hierarchy {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    position: relative;
-    padding: 20px 0;
-}
-
-.faction-row {
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
-    position: relative;
-}
-
-.faction-card--main {
-    flex: 0 0 320px;
-    padding: 48px 28px 32px;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    background: var(--paper);
-    border: 1px solid var(--paper-edge);
-    border-top: 6px solid;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.65);
-    transform: rotate(-0.5deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.faction-card--main:hover {
-    transform: rotate(0deg) translateY(-6px);
-    box-shadow: 0 16px 36px rgba(0,0,0,0.8);
-}
-
-.faction-card--sub {
-    flex: 0 0 280px;
-    padding: 40px 24px 28px;
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    background: var(--paper-dark);
-    border: 1px solid var(--paper-edge);
-    border-top: 4px solid;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.55);
-    transform: rotate(0.5deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.faction-card--sub:hover {
-    transform: rotate(0deg) translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.7);
-}
-
-.faction-card__symbol {
-    position: absolute;
-    top: -14px;
-    left: 22px;
-    width: 38px;
-    height: 38px;
-    font-family: var(--font-display);
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.55);
-    transform: rotate(-6deg);
-    border: 1px solid var(--paper-edge);
-}
-
-.faction-card__name {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: var(--ink);
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.faction-card--main .faction-card__name {
-    font-size: 26px;
-}
-
-.faction-card__tag {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--stamp-blue);
-    margin-bottom: 10px;
-}
-
-.faction-card__type {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--ink-faint);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 14px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--paper-edge);
-}
-
-.faction-card__desc {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-    flex: 1;
-}
-
-.faction-sub-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
+  .passport-cover {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
 
-.faction-threads {
+  .passport-cover__back .passport-photo-full {
+    display: none !important;
+  }
+
+
+  .passport-mobile-photo {
+    display: block !important;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.faction-thread-line {
-    stroke: var(--thread);
-    stroke-width: 3;
-    stroke-linecap: round;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));
-    opacity: 0.85;
-}
-
-
-@media (max-width: 900px) {
-    .faction-row {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .faction-card--main,
-    .faction-card--sub {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-    
-    .faction-threads {
-        display: none;
-    }
-}
-
-/* ============================================================
-   ПЕЧАТЬ NPC НА КАРТОЧКЕ ПЕРСОНАЖА
-   ============================================================ */
-.card-npc-stamp {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    font-family: var(--font-display);
-    font-size: 16px;
-    letter-spacing: 4px;
-    color: var(--stamp-blue);
-    border: 2px solid var(--stamp-blue);
-    padding: 3px 10px;
-    transform: rotate(8deg);
-    opacity: 0.85;
-    background: transparent;
+    width: 100% !important;
+    height: 45vh !important;
+    min-height: 280px;
+    max-height: 400px;
     z-index: 5;
-    pointer-events: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-    text-shadow: 1px 1px 0 rgba(216, 206, 176, 0.3);
+    border-bottom: 3px solid var(--paper-edge);
+  }
+
+  .passport-mobile-photo img {
+    object-position: top center !important;
+  }
+  .passport-page--right {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: calc(45vh + 20px) 20px 100px !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.4s ease 0.6s;
+  }
+  .passport-modal.is-open .passport-page--right { opacity: 1; }
+
+  .passport-links-row {
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    z-index: 1000;
+    margin: 0;
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--paper);
+    border-top: 2px solid var(--paper-edge);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .passport-link-btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    padding: 10px 6px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .passport-footer {
+    padding-bottom: 100px !important;
+    border-top: none;
+    margin-top: 10px;
+  }
+
+  .passport-name { font-size: 26px; }
+  .passport-status-stamp { font-size: 22px; letter-spacing: 3px; padding: 10px 20px; }
+  .passport-npc-stamp { font-size: 15px; letter-spacing: 4px; }
+  .passport-rating-sticker { bottom: 15px; right: 15px; padding: 10px 14px; }
+  .passport-rating-value { font-size: 26px; }
+  .passport-cover__title { font-size: 28px; }
+  .passport-cover__emblem { font-size: 60px; }
 }
 
-
-@media (max-width: 720px) {
-    .card-npc-stamp {
-        font-size: 13px;
-        letter-spacing: 3px;
-        padding: 2px 8px;
-        top: 10px;
-        right: 10px;
-    }
+@media (max-width: 480px) {
+  .passport-mobile-photo { height: 40vh !important; min-height: 240px; }
+  .passport-page--right { padding-top: calc(40vh + 15px) !important; padding-left: 15px !important; padding-right: 15px !important; padding-bottom: 90px !important; }
+  .passport-name { font-size: 22px; }
+  .passport-rating-value { font-size: 24px; }
+  .passport-cover__title { font-size: 24px; letter-spacing: 4px; }
+  .passport-cover__emblem { font-size: 50px; }
+  .passport-status-stamp { font-size: 18px; letter-spacing: 2px; padding: 8px 14px; }
+  .passport-npc-stamp { font-size: 14px; letter-spacing: 3px; padding: 3px 10px; }
+  .passport-links-row { bottom: 10px; left: 8px; right: 8px; }
+  .passport-footer { padding-bottom: 90px !important; }
 }
-
