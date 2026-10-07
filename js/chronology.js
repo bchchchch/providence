@@ -25,7 +25,6 @@ function renderTimeline() {
             <div class="timeline-card__pin"></div>
         `;
 
-        // Соединяющая нить (кроме последней карточки)
         if (index < window.CHRONOLOGY.length - 1) {
             const thread = document.createElement('div');
             thread.className = 'timeline-thread';
@@ -36,7 +35,6 @@ function renderTimeline() {
         card.addEventListener('click', () => openDetail(item));
         track.appendChild(card);
     });
-        // Выделяем последнее добавленное событие красным кружком
     const cards = track.querySelectorAll('.timeline-card');
     if (cards.length > 0) {
         const lastCard = cards[cards.length - 1];
@@ -54,15 +52,12 @@ function setupDetailPanel() {
     };
 
     closeBtn.addEventListener('click', closePanel);
-    
-    // Закрытие по клику на оверлей
     panel.addEventListener('click', (e) => {
         if (e.target === panel) {
             closePanel();
         }
     });
 
-    // Закрытие по Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && panel.classList.contains('is-open')) {
             closePanel();
