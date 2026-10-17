@@ -398,6 +398,7 @@ function openPassport(charId) {
     setText('pAppearance', char.appearance || 'Нет описания.');
     setText('pCharacter', char.character || 'Нет описания.');
     setText('pRole', char.role_in_city || 'Нет данных.');
+    setText('pFacts', char.facts || 'Нет данных.');
 
     
     const setupLink = (btnId, link) => {
