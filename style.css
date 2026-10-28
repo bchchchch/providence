@@ -942,9 +942,7 @@ body {
   text-shadow: 1px 1px 0 rgba(216, 206, 176, 0.3);
 }
 
-/* ============================================================
-   АДАПТИВ САЙТА (≤720px)
-   ============================================================ */
+
 @media (max-width: 720px) {
   body { padding: 8px; }
   .corkboard { padding: 22px 16px 28px; border-width: 8px; }
@@ -968,9 +966,6 @@ body {
   .board-footer { flex-direction: column; gap: 6px; text-align: center; font-size: 10px; }
 }
 
-/* ============================================================
-   АДАПТИВ ХРОНОЛОГИИ
-   ============================================================ */
 @media (max-width: 900px) {
   .timeline-card { flex: 0 0 240px; padding: 24px 20px 20px; margin-right: 50px; }
   .timeline-thread { right: -50px; width: 50px; }
@@ -995,9 +990,7 @@ body {
   .timeline-card--new::after { top: -5px; left: -5px; right: -5px; bottom: -5px; border-width: 1.5px; }
 }
 
-/* ============================================================
-   АДАПТИВ ФРАКЦИЙ
-   ============================================================ */
+
 @media (max-width: 900px) {
   .faction-row { flex-direction: column; gap: 30px; }
   .faction-card--main, .faction-card--sub { flex: 0 0 auto; width: 100%; }
@@ -1010,17 +1003,11 @@ body {
   .faction-card__name { font-size: 20px; }
 }
 
-/* ============================================================
-   АДАПТИВ ПЕЧАТЕЙ НА КАРТОЧКАХ
-   ============================================================ */
 @media (max-width: 720px) {
   .card-npc-stamp { font-size: 13px; letter-spacing: 3px; padding: 2px 8px; top: 10px; right: 10px; }
   .card-status-stamp { font-size: 14px; letter-spacing: 2px; padding: 6px 12px; }
 }
 
-/* ============================================================
-   АДАПТИВ НАВИГАЦИИ (дополнительно)
-   ============================================================ */
 @media (max-width: 720px) {
   .folder { min-width: 55px !important; padding: 10px 4px 8px !important; }
   .folder__label { font-size: 10px !important; letter-spacing: 0.5px !important; }
@@ -1033,9 +1020,6 @@ body {
   .folder__tab { font-size: 6px !important; padding: 1px 3px !important; }
 }
 
-/* ============================================================
-   ★★★ МОБИЛЬНАЯ АДАПТАЦИЯ ПАСПОРТА (ЕДИНЫЙ БЛОК) ★★★
-   ============================================================ */
 @media (max-width: 900px) {
 
   .passport-modal { padding: 0; align-items: stretch; }

@@ -296,10 +296,6 @@ window.CHARACTERS = [
   },
 ];
 
-/* ============================================================
-   АВТОМАТИЧЕСКОЕ ЗАПОЛНЕНИЕ АВАТАРОВ
-   Если avatar не задан — подставляем путь по id
-   ============================================================ */
 window.CHARACTERS.forEach(char => {
   if (!char.avatar || char.avatar === '') {
     char.avatar = `images/characters/${char.id}.jpg`;
